@@ -1,0 +1,44 @@
+#  C++及其标准程序库简介
+## 新语言特征
+### 模板
+非型别参数支持
+缺省模板参数
+typename 关键字 // 模板中定义类型
+成员模板
+嵌套类
+
+### 基本型别显示初始化为0
+### 异常处理
+try{}catch(){}; // throw
+异常对象
+与函数回调不是一码事
+### 命名空间
+using derective 方便但是打破了命名空间的本意
+同一个名字可以在多个模块中使用
+### bool运算符号
+0  =>  false
+!0  =>  true
+### explicit 
+class Stack{
+	explicit Stack(int size);
+};
+不是explicit会导致下面的不想要的结果
+Stack s;
+s = 40;
+### 4种转换操作符号
+ static_cast
+ dynamic_cast
+ const_cast // 还能去除volatile修饰符号?
+ reinterpret_cast
+### 常数静态成员初始化
+class MyClass{
+	static const int num=100;
+	int elems[num];
+}；
+const int MyClass::num; //也得定义
+### main定义式
+int main()
+int main(int argc, char *argv[])
+隐式返回 return 0
+### 复杂度和big-o表示法
+分期摊还 amortized
